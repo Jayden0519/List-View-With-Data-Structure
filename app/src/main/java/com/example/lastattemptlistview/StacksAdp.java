@@ -1,6 +1,10 @@
 package com.example.lastattemptlistview;
 
 import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+
+import java.util.Stack;
 
 public class StacksAdp extends MainActivity<String>
 {
@@ -14,13 +18,12 @@ public class StacksAdp extends MainActivity<String>
             this.stack = stack;
         }
 
-        @Override
+
                 public int getCount()
         {
             return stack.size();
         }
 
-        @Override
                 public View getView(int position, View convertView, ViewGroup parent)
         {
             LayoutInflater inflator =  (LayoutInflator) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);

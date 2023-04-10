@@ -3,6 +3,9 @@ package com.example.lastattemptlistview;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ListView;
+
+import java.util.Stack;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -15,9 +18,9 @@ public class MainActivity extends AppCompatActivity
     }
 
     Stack<String> stack = new Stack<>();
-        for (int i = 0; i < 1000; i++)
+        for(int i = 0; i < 1000; i++)
         {
-               stack.push("Element " + i);
+            stack.push("Element " + i);
         }
 
     StackAdapter adapter = new StackAdapter(this, R.layout.list_item, stack);
